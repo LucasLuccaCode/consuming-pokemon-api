@@ -20,10 +20,19 @@ experiência => base_experience
 EXTRA: se puder ordene por nome.
 */
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { api } from "../../services"
 
 export default function Home() {
   const [pokemons, setPokemons] = useState([])
+
+  useEffect(() => {
+    const getPokemons = async () => {
+      const { data } = await api.get()
+      setPokemons(data.results)
+    }
+    getPokemons()
+  }, [])
 
   return (
     <div className="c-home">
@@ -32,7 +41,7 @@ export default function Home() {
       <div className="c-pokemons">
         <ul>
           {
-            pokemons.map( pokemon => (
+            pokemons.map(pokemon => (
               <li key={pokemon.name}>{pokemon.name}</li>
             ))
           }
