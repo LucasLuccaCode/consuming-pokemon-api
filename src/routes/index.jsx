@@ -3,8 +3,6 @@ import { createBrowserRouter, Navigate } from "react-router-dom"
 import Root from "../pages/Root"
 import NotFound from "../pages/NotFound"
 import Home from "../pages/Home"
-import Dashboard from "../pages/Dashboard"
-import Contact from "../pages/Contact"
 import About from "../pages/About"
 
 export default createBrowserRouter([
@@ -16,32 +14,6 @@ export default createBrowserRouter([
       {
         path: "/",
         element: <Home />
-      },
-      {
-        path: "dashboard",
-        element: <Dashboard />,
-        children: [
-          {
-            index: true,
-            element: <Navigate to="posts" />
-          },
-          {
-            path: "posts",
-            element: <h1>Suas <strong>publicações</strong> aparecerão aqui...</h1>
-          },
-          {
-            path: "recent",
-            element: <h1>Suas <strong>publicações recentes</strong> aparecerão aqui...</h1>
-          },
-          {
-            path: "favorites",
-            element: <h1>Suas <strong>publicações favoritas</strong> aparecerão aqui...</h1>
-          }
-        ]
-      },
-      {
-        path: "contact",
-        element: <Contact />
       },
       {
         path: "about",
