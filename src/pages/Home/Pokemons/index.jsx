@@ -2,8 +2,9 @@ import { useEffect, useState } from "react"
 import { api } from "../../../services"
 
 import Pokemon from "./Pokemon"
+import { PokemonsContainer } from "./StyledComponents"
 
-export default function Pokemons(){
+export default function Pokemons() {
   const [pokemons, setPokemons] = useState([])
 
   useEffect(() => {
@@ -16,14 +17,12 @@ export default function Pokemons(){
   }, [])
 
   return (
-    <div className="c-pokemons">
-      <ul>
-        {
-          pokemons.map(item => (
-            <Pokemon key={item.name} item={item} />
-          ))
-        }
-      </ul>
-    </div>
+    <PokemonsContainer>
+      {
+        pokemons.map(item => (
+          <Pokemon key={item.name} item={item} />
+        ))
+      }
+    </PokemonsContainer>
   )
 }

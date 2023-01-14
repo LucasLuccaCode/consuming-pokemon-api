@@ -1,4 +1,8 @@
-:root {
+
+import { createGlobalStyle } from "styled-components";
+
+const Global = createGlobalStyle`
+  :root {
   --primary-color: #2a2a2a;
   --secondary-color: #3a3a3a;
   --details-color: #00b1ff;
@@ -155,3 +159,6 @@ button {
   width: 100%;
   height: 100%;
 }
+`
+
+export default Global

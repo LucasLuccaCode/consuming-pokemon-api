@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { api } from "../../../../services"
+import { Image, Info, PokemonContainer } from "./StyledComponents"
 
 export default function Pokemon({ item }) {
   const [details, setDetails] = useState({})
@@ -13,10 +14,12 @@ export default function Pokemon({ item }) {
   }, [])
 
   return (
-    <li className="c-pokemons__pokemons">
-      <img src={details.sprites?.front_default} alt={`Foto do ${details?.name}`} />
-      <h2>{details.name}</h2>
-      <p>{details.base_experience}</p>
-    </li>
+    <PokemonContainer>
+      <Image src={details.sprites?.front_default} alt={`Foto do ${details?.name}`} />
+      <Info>
+        <h2 className="nowrap">{details.name}</h2>
+        <p>{details.base_experience} <strong>EXP</strong></p>
+      </Info>
+    </PokemonContainer>
   )
 }
