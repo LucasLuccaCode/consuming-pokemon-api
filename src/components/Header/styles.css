@@ -3,7 +3,6 @@ header {
   position: sticky;
   top: 0;
   backdrop-filter: blur(2px);
-  /* box-shadow: 0 2px 0 0 var(--details-color); */
   background: var(--secondary-color);
 }
 

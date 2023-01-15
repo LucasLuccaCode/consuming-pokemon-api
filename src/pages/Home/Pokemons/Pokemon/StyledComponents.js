@@ -27,14 +27,14 @@ gap: .5rem;
 overflow: hidden;
 
   h2 {
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-transform: capitalize;
   }
 
   p {
     display: flex;
     align-items: center;
-    font-size: .9rem;
+    font-size: .8rem;
     font-weight: bold;
   }  
 
