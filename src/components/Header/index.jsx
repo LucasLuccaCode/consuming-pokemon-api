@@ -1,19 +1,17 @@
+import { HeaderContainer, Navbar, NavItem } from "./StyledComponents";
 import { NavLink } from "react-router-dom";
-import "./styles.css"
 
 export default function Header() {
   return (
-    <header>
-      <nav>
-        <ul className="menu">
-          <li>
-            <NavLink to={`/`}>Home</NavLink>
-          </li>
-          <li>
-            <NavLink to={`/about`}>Sobre</NavLink>
-          </li>
-        </ul>
-      </nav>
-    </header >
+    <HeaderContainer>
+      <Navbar className="menu">
+        <NavItem>
+          <NavLink to={`/`}>Home</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink to={`/about`}>Sobre</NavLink>
+        </NavItem>
+      </Navbar>
+    </HeaderContainer>
   )
 }
