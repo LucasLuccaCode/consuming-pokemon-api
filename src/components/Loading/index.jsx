@@ -1,9 +1,10 @@
-import "./styles.css"
+import { LoadingContainer, Spinning } from "./StyledComponents";
 
-export default function Loader(){
+
+export default function Loading(){
   return (
-    <div className="c-loading">
-      <div className="c-loading__spinning"></div>
-    </div>
+    <LoadingContainer>
+      <Spinning />
+    </LoadingContainer>
   )
 }
