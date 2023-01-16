@@ -1,43 +1,58 @@
-# Projeto Pokémon API
+# Consumindo PokéAPI
 
-Este projeto tem como objetivo consumir a API PokeApi e listar todos os Pokémons disponíveis na consulta do seguinte endpoint: https://pokeapi.co/api/v2/pokemon.
+Este projeto tem como objetivo usar recursos modernos do react para consultar / exibir a API PokéAPI a partir do seguinte endpoint: https://pokeapi.co/api/v2/pokemon.
 
 ## Como utilizar
 
-Clone este repositório e instale as dependências necessárias executando o comando:
+Clone este repositório:
 
 ```
-yarn install ou npm install
+git clone https://github.com/LucasLuccaCode/consuming-pokemon-api.git
+```
+
+Navegue para a pasta do projeto:
+
+```
+cd consuming-pokemon-api
+```
+
+Instale as dependências:
+
+```
+yarn install 
+
+ou
+
+npm install
 ```
 
 Em seguida, execute o comando para iniciar o projeto:
  
 ```
-yarn start ou npm start
+yarn start
+
+ou
+
+npm start
 ```
-
-## Informações exibidas
-
-- Imagem
-- Nome
-- Experiência base
-
-## Como funciona
-
-O projeto consome a API PokéAPI e lista todos os Pokémons disponíveis na consulta do endpoint https://pokeapi.co/api/v2/pokemon. Para acessar as informações individuais de cada Pokémon, é utilizado o endpoint https://pokeapi.co/api/v2/pokemon/:id, onde :id é o número do Pokémon desejado.
 
 ## Informações exibidas:
 
 - Imagem: obtida através do atributo `sprites.front_default`
-- Nome: obtido diretamente do objeto retornado pela API
-- Experiência base: obtida através do atributo `base_experience`
+- Nome: obtido diretamente do objeto retornado pela API através do atributo `name`
+- Experiência: obtida através do atributo `base_experience`
 
 ## Extras
+
   - Ordenado por nome.
+  - Para acessar as informações individuais de cada Pokémon, é utilizado o endpoint `https://pokeapi.co/api/v2/pokemon/:id`, onde :id é o número do Pokémon desejado.
 
 ## Tecnologias utilizadas
+
 - React
-- Axios
 - React Router
+- React Query
+- Axios
+- Styled Components
 
 ![Preview demo](https://github.com/LucasLuccaCode/consuming-pokemon-api/blob/main/public/demo.png)
